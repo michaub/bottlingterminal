@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="static/admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet"> 
+    <title>Admin panel</title>
+</head>
+<body>
+<h1>Bottling terminal admin panel</h1>
+<div id="title-line"></div>
+<table class="menu-table">
+    <tr>
+        <td class="menu">
+            <ul>
+                <li><a class="li-menu" href="admin.html">Dashboard</a></li>
+                <li><a class="li-menu" href="bottling_runs.html">Bottling runs</a></li>
+                <li><a class="li-menu" href="add_bottling.html">Add bottling run</a></li>
+                <li>more menu</li>
+            </ul>
+        </td>
+        <td class="content">
+            <div id="main-body">
+                <table class="dashboard-table">
+                    <tr>
+                        <th>Bottling runs in database:</th>
+                        <th>Not completed:</th>
+                        <th>Completed:</th>
+                    </tr>
+                    <tr>
+                        <td class="stats">154</td>
+                        <td class="stats" id="stat-not-completed">3</td>
+                        <td class="stats">151</td>
+                    </tr>
+                </table> 
+                <table class="dashboard-table">
+                    <tr>
+                        <th>Current bottling:</th>
+                        <th>Next bottling:</th>
+                    </tr>
+                    <tr>
+                        <td class="stats">Machir Bay 5cl</td>
+                        <td class="stats">Private Cask</td>
+                    </tr>
+                </table>                                          
+            </div>
+        </td>
+    </tr>
+
+</table>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/6.3.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>
+</html>
+

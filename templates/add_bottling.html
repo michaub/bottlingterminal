@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="static/admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <title>Admin panel</title>
+</head>
+<body>
+<h1>Bottling terminal admin panel</h1>
+<div id="title-line"></div>
+<table class="menu-table">
+    <tr>
+        <td class="menu">
+            <ul>
+                <li><a class="li-menu" href="admin.html">Dashboard</a></li>
+                <li><a class="li-menu" href="bottling_runs.html">Bottling runs</a></li>
+                <li><a class="li-menu" href="add_bottling.html">Add bottling run</a></li>
+                <li>more menu</li>
+            </ul>
+        </td>
+        <td class="content">
+            <div id="main-body">
+                <form name="add_bottling" action="/addbottling" method="post">
+                    <label for="date" class="title">Date:</label><input type="date"><br />
+                    <label for="product" class="title">Product:</label> <input type="text"><br />
+                    <label for="bottle_size" class="title">Bottle size:</label>
+                    <select id="bottle_size">
+                    <option value="70cl">70cl</option>
+                    <option value="75cl">75cl</option>
+                    <option value="5cl">5cl</option>
+                    <option value="20cl">20cl</option>
+                    </select><br />
+                    <label for="label_info" class="title">Label info:</label> <input type="text"><br />
+                    <label for="quantity" class="title">Quantity:</label><input type="text"><br />
+                    <label for="status" class="title">Status:</label>
+                      <select id="status">
+                        <option value="Not completed">Not completed</option>
+                        <option value="completed">Completed</option>
+                      </select><br />
+                    <label for="date_completed" class="title">Date completed:</label><input type="date"><br />
+                    <input type="submit" value="Add" id="submit" />
+
+                </form>
+            </div>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>
