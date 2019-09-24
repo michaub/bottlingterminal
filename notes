@@ -1,3 +1,8 @@
 how to log in to postgres
+
 sudo -u postgres psql //to otworzy interpreter psql od razu
+
 \c bottlingDB //polaczy mnie z baza danych bottlingDB
+
+INSERT INTO bottlings (timestamp, date, product, back_label, qty, user_edit) VALUES
+(current_timestamp, '23.09.2019', '100%', 'UK', 420, FALSE); //doda rekord z timestampem
