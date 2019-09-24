@@ -1,0 +1,3 @@
+how to log in to postgres
+sudo -u postgres psql //to otworzy interpreter psql od razu
+\c bottlingDB //polaczy mnie z baza danych bottlingDB
