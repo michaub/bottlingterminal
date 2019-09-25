@@ -90,12 +90,34 @@ input, select, text, label {
     text-align: left;
     font-size: 100%;
     }
-button, input, form, label {
+form {
     font-size: 100%;
-    width:170px;
+    width: 450px;
     margin: 0;
 }
-
+.form_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 3px;
+}
 form {
+    margin: auto;
+}
+label {
+    width: 150px;
+    font-size: 110%;
+    margin: 0;
+    text-align: left;
+}
+input, select {
+    width: 200px;
+    font-size: 100%;
+    margin: 0;
+}
+#submit_button {
+    width: 200px;
+    font-size: 100%;
     margin: auto;
 }
