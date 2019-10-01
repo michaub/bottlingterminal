@@ -6,3 +6,6 @@ sudo -u postgres psql //to otworzy interpreter psql od razu
 
 INSERT INTO bottlings (timestamp, date, product, back_label, qty, user_edit) VALUES
 (current_timestamp, '23.09.2019', '100%', 'UK', 420, FALSE); //doda rekord z timestampem
+
+
+just configured linux on windows ;)
