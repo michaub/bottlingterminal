@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="static/admin.css">
-    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet"> 
-    <title>Admin panel</title>
-</head>
-<body>
-<h1>Bottling terminal admin panel</h1>
-<div id="title-line"></div>
-<table class="menu-table">
-    <tr>
-        <td class="menu">
-            <ul>
-                <li><a class="li-menu" href="admin.html">Dashboard</a></li>
-                <li><a class="li-menu" href="bottling_runs.html">Bottling runs</a></li>
-                <li><a class="li-menu" href="add_bottling.html">Add bottling run</a></li>
-                <li>more menu</li>
-            </ul>
-        </td>
-        <td class="content">
-            <div id="main-body">
+{% extends "layout.html" %}
+{% block body %}
                 <table class="dashboard-table">
                     <tr>
                         <th>ID</th>
@@ -53,12 +33,4 @@
                     </tr>
                 </table>
                                                     
-            </div>
-        </td>
-    </tr>
-
-</table>
-
-</body>
-</html>
-
+{% endblock %}

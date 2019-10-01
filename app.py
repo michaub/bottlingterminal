@@ -3,16 +3,20 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("admin.html")
+    return render_template("dashboard.html")
 
-@app.route("/admin.html")
-def admin():
-    return render_template("admin.html")
-
-@app.route("/bottling_runs.html")
+@app.route("/bottlingruns")
 def bottlingruns():
     return render_template("bottling_runs.html")
 
-@app.route("/add_bottling.html")
+@app.route("/addbottling")
 def addbottling():
     return render_template("add_bottling.html")
+
+@app.route("/visitorsview")
+def visitorsview():
+    return render_template("visitorsview.html")
+
+@app.route("/bottlingview")
+def bottlinghall():
+    return render_template("bottlingview.html")
