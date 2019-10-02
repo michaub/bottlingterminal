@@ -10,4 +10,6 @@ INSERT INTO bottlings (timestamp, date, product, back_label, qty, user_edit) VAL
 Usefull git commands:
 
 git branch - will show all branches on local machine + currently active branch
+git branch BRANCHNAME - will create new branch
 git checkout BRANCHNAME - change branch
+git merge - will combine 2 branches
