@@ -7,5 +7,7 @@ sudo -u postgres psql //to otworzy interpreter psql od razu
 INSERT INTO bottlings (timestamp, date, product, back_label, qty, user_edit) VALUES
 (current_timestamp, '23.09.2019', '100%', 'UK', 420, FALSE); //doda rekord z timestampem
 
+Usefull git commands:
 
-just configured linux on windows ;)
+git branch - will show all branches on local machine + currently active branch
+git checkout BRANCHNAME - change branch
