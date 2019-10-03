@@ -13,3 +13,8 @@ git branch - will show all branches on local machine + currently active branch
 git branch BRANCHNAME - will create new branch
 git checkout BRANCHNAME - change branch
 git merge - will combine 2 branches
+
+DATABASE NEEDS TO BE RE-DONE, WRONG DATA TYPES, DO NOT DELETE EXISTING ONE, JUST CREATE A NEW ONE CALLED bottlings1
+
+REMEMBER TO HAVE A LOOK AT NOTES ON EDX
+Dowiedz sie jak polaczyc baze danych z app.py
