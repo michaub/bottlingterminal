@@ -18,3 +18,12 @@ DATABASE NEEDS TO BE RE-DONE, WRONG DATA TYPES, DO NOT DELETE EXISTING ONE, JUST
 
 REMEMBER TO HAVE A LOOK AT NOTES ON EDX
 Dowiedz sie jak polaczyc baze danych z app.py
+
+Zmienilem stroktore katalogow zgodnie z tutorialem Flaska
+
+Sprawdz czy DATABASE_URL=postgres://user.pass@localhost/dbname zadziala.
+
+Uzytkownik bazy 'michal' zalozony, haslo '1337', powinien miec dostep do bazy.
+Pamietaj zeby sprawdzic typy danych w bazie bo chyba sa zle.
+
+pip freeze --local > requirements.txt doda automatycznie wymagania

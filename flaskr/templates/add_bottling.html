@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block body %}
+                <form name="add_bottling" action="/addbottlingrun" method="post">
+                    <div class="form_group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date">
+                    </div>
+                    <div class="form_group">
+                        <label for="vatting_number">Vatting number:</label>
+                        <input type="text" id="vatting_number">
+                    </div>
+                    <div class="form_group">
+                        <label for="bottle_size">Bottle size:</label>
+                        <select id="bottle_size" id="bottle_size">
+                            <option value="700ml">700ml</option>
+                            <option value="750ml">750ml</option>
+                             <option value="200ml">200ml</option>
+                            <option value="50ml">50ml</option>
+                        </select>
+                    </div>
+                    <div class="form_group">
+                        <label for="product">Product:</label>
+                        <input type="text" id="product">
+                    </div>
+                    <div class="form_group">
+                        <label for="back_label">Back label:</label>
+                        <input type="text" id="back_label">
+                    </div>
+                    <div class="form_group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="text" id="quantity">
+                    </div>
+                    <div class="form_group">
+                        <label for="status">Status:</label>
+                        <select id="status" id="status">
+                            <option value="not_completed">Not completed</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <div class="form_group">
+                        <label for="date_completed">Date completed:</label>
+                        <input type="date" id="date_completed">
+                    </div>
+                    <div class="form_group">
+                        <label for="user_edit">Allow user edit:</label>
+                        <input type="checkbox" id="user_edit">
+                    </div>
+                    <input type="submit" value="Add bottling run" id="submit_button">
+
+
+                </form>                                    
+{% endblock %}
