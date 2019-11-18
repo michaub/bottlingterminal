@@ -7,18 +7,20 @@
                         <th>Completed:</th>
                     </tr>
                     <tr>
-                        <td class="stats">154</td>
-                        <td class="stats" id="stat-not-completed">3</td>
-                        <td class="stats">151</td>
+                        <td class="stats">{{number_of_bottlings}}</td>
+                        <td class="stats" id="stat-not-completed">{{not_completed_bottlings}}</td>
+                        <td class="stats">{{completed_bottlings}}</td>
                     </tr>
                 </table> 
                 <table class="dashboard-table">
                     <tr>
+                        <th>Previous bottling:</th>
                         <th>Current bottling:</th>
                         <th>Next bottling:</th>
                     </tr>
                     <tr>
-                        <td class="stats">Machir Bay 5cl</td>
+                        <td class="stats">{{previous_bottling}}</td>
+                        <td class="stats">{{current_bottling}}</td>
                         <td class="stats">Private Cask</td>
                     </tr>
                 </table>                                          

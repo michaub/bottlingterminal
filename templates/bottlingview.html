@@ -1,4 +1,33 @@
 {% extends "layout.html" %}
 {% block body %}
-Bottling hall view
+<h1>Bottling hall view</h1>
+<table class="dashboard-table">
+        <tr>
+            <th>ID</th>
+            <th>Date added</th>                        
+            <th>Vatting number</th>
+            <th>Bottle size</th>
+            <th>Product</th>
+            <th>Label info</th>
+            <th>Quantity</th>
+            <th>Status</th>
+            <th>Note</th>
+            <th>Action</th>
+            
+        </tr>
+        {% for bottling_runs in bottling_runs %}
+        <tr>
+            <td>{{bottling_runs.id}}</td>
+            <td>{{bottling_runs.user_date}}</td>
+            <td>{{bottling_runs.vatting_number}}</td>
+            <td>{{bottling_runs.bottle_size}}</td>
+            <td>{{bottling_runs.product}}</td>
+            <td>{{bottling_runs.back_label}}</td>
+            <td>{{bottling_runs.qty}}</td>
+            <td>{{bottling_runs.status}}</td>
+            <td>{{bottling_runs.note}}</td>
+            <td><a href="/complete_bottling_run"><img src="/static/completed.png" height="45" width="45"></a><a href="/edit_bottling_run"><img src="/static/edit.png" height="45" width="45"></a></td>
+        </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

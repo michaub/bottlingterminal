@@ -81,7 +81,7 @@ input, select, text, label {
   font-size: 54px;
 }
 #main-body {
-    text-align: left;
+    /*text-align: left;*/
     font-size: 100%;
     }
 form {

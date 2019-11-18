@@ -1,36 +1,36 @@
 {% extends "layout.html" %}
 {% block body %}
-                <table class="dashboard-table">
-                    <tr>
-                        <th>ID</th>
-                        <th>Date added</th>                        
-                        <th>Product</th>
-                        <th>Bottle size</th>
-                        <th>Label info</th>
-                        <th>Qty (bottles/cases)</th>
-                        <th>If completed</th>
-                        <th>Date completed</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>31/07/2019</td>
-                        <td>Machir Bay 5cl</td>
-                        <td>5cl</td>
-                        <td>GX</td>
-                        <td>80/3840</td>
-                        <td>Yes/No</td>
-                        <td>01/08/2019</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>31/07/2019</td>
-                        <td>Private Cask 103/20017</td>
-                        <td>70cl</td>
-                        <td>Red front</td>
-                        <td>...</td>
-                        <td>Yes/No</td>
-                        <td>01/08/2019</td>
-                    </tr>
-                </table>
-                                                    
+
+<table class="dashboard-table">
+        <tr>
+            <th>ID</th>
+            <th>User date</th>                        
+            <th>Vatting number</th>
+            <th>Bottle size</th>
+            <th>Product</th>
+            <th>Label info</th>
+            <th>Qty</th>
+            <th>Status</th>
+            <th>User completed</th>
+            <th>User edit</th>
+            <th>Note</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for bottling_runs in bottling_runs %}
+        <tr>
+            <td>{{bottling_runs.id}}</td>
+            <td>{{bottling_runs.user_date}}</td>
+            <td>{{bottling_runs.vatting_number}}</td>
+            <td>{{bottling_runs.bottle_size}}</td>
+            <td>{{bottling_runs.product}}</td>
+            <td>{{bottling_runs.back_label}}</td>
+            <td>{{bottling_runs.qty}}</td>
+            <td>{{bottling_runs.status}}</td>
+            <td>{{bottling_runs.user_date_completed}}</td>
+            <td>{{bottling_runs.allow_user_edit}}</td>
+            <td>{{bottling_runs.note}}</td>
+            <td>{{bottling_runs.timestamp}}</td>
+        </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

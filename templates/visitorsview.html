@@ -1,4 +1,36 @@
 {% extends "layout.html" %}
 {% block body %}
-Visitors View
+<h1>Welcome Dear Visitors! Here you can find some stats about our bottling hall.</h1>
+<table class="dashboard-table">
+        <tr>
+            <th>ID</th>
+            <th>User date</th>                        
+            <th>Vatting number</th>
+            <th>Bottle size</th>
+            <th>Product</th>
+            <th>Label info</th>
+            <th>Qty</th>
+            <th>Status</th>
+            <th>User completed</th>
+            <th>User edit</th>
+            <th>Note</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for bottling_runs in bottling_runs %}
+        <tr>
+            <td>{{bottling_runs.id}}</td>
+            <td>{{bottling_runs.user_date}}</td>
+            <td>{{bottling_runs.vatting_number}}</td>
+            <td>{{bottling_runs.bottle_size}}</td>
+            <td>{{bottling_runs.product}}</td>
+            <td>{{bottling_runs.back_label}}</td>
+            <td>{{bottling_runs.qty}}</td>
+            <td>{{bottling_runs.status}}</td>
+            <td>{{bottling_runs.user_date_completed}}</td>
+            <td>{{bottling_runs.allow_user_edit}}</td>
+            <td>{{bottling_runs.note}}</td>
+            <td>{{bottling_runs.timestamp}}</td>
+        </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
