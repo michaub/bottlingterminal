@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 {% block body %}
 <h1>Bottling hall view</h1>
-<table class="dashboard-table">
+
+    <table class="dashboard-table">
         <tr>
             <th>ID</th>
             <th>Date added</th>                        
@@ -29,5 +30,5 @@
             <td><a href="/complete_bottling_run"><img src="/static/completed.png" height="45" width="45"></a><a href="/edit_bottling_run"><img src="/static/edit.png" height="45" width="45"></a></td>
         </tr>
         {% endfor %}
-    </table>
+    </table> 
 {% endblock %}

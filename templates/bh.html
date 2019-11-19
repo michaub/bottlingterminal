@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- <link rel="stylesheet" href="static/admin.css">-->
+    <link rel="stylesheet" href="static/bottling.css">
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Bottling terminal</title>
+    <style>
+        .my-container {
+        /*border: 2px solid black;*/
+        font-size: 24px;
+        }
+
+        .my-row {
+        /*border: 2px solid black;
+        text-align: center;*/
+        padding: 15px;
+        background-color: #90A0B9;
+        margin: 15px;
+        }
+
+        .my-col {
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        body {
+            background-color: #343a40;
+            font-family: 'Darker Grotesque', sans-serif;
+        }
+        .my-navbar {
+            padding-left: 13%;
+            font-size: 120px;
+            background-color: #1B3975;
+            color: #90A0B9;
+        }
+        .footer {
+            font-size: 18px;
+            display: inline;
+            padding-right: 25px;
+        }
+        #bottom-panel {
+            text-align: center;
+            background-color: #1B3975;
+            color: #90A0B9;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="container">
+        <div id="top_title">
+            Bottling terminal
+        </div>
+    </div>-->
+    <nav class="navbar my-navbar">
+            <a class="navbar-brand" href="/bh"><h1>Bottling terminal</h1></a>
+            <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </nav>
+    <div class="container-fluid my-container">
+        <table class="table table-striped table-dark table-hover">
+            <tr class="table-header">
+                <th scope="col">ID</th>
+                <th scope="col">Date added</th>
+                <th scope="col">Vatting number</th>
+                <th scope="col">Bottle size</th>
+                <th scope="col">Product</th>
+                <th scope="col">Label info</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Status</th>
+                <th scope="col">Note</th>
+                <th scope="col">Action</th>
+            </tr>
+        {% for bottling_runs in bottling_runs %}
+            <tr>
+                <th scope="col">{{bottling_runs.id}}</th>
+                <th scope="col">{{bottling_runs.user_date}}</th>
+                <th scope="col">{{bottling_runs.vatting_number}}</th>
+                <th scope="col">{{bottling_runs.bottle_size}}</th>
+                <th scope="col">{{bottling_runs.product}}</th>
+                <th scope="col">{{bottling_runs.back_label}}</th>
+                <th scope="col">{{bottling_runs.qty}}</th>
+                <th scope="col">{{bottling_runs.status}}</th>
+                <th scope="col">{{bottling_runs.note}}</th>
+                <th scope="col"><a href="/complete_bottling_run"><img src="/static/completed.png" height="45" width="45"></a><a href="/edit_bottling_run"><img src="/static/edit.png" height="45" width="45"></a></th>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+<div id="bottom-panel">
+    <ul>
+        <li class="footer">Credits: Michal Besser</li>    
+        <li class="footer">Useful links: <a href="https://kilchoman.distillerygenious.co.uk">KDMS</a></li>
+    </ul>
+</div>
+
+</body>
+</html>

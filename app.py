@@ -68,5 +68,10 @@ def edit_bottling_run():
     # Temporary just rendering template but not working because of method=post
     return render_template("bottlingview.html")
 
+@app.route("/bh")
+def bh():
+    bottling_runs = db.execute("SELECT * FROM bottlings2 ORDER BY id DESC").fetchall()
+    return render_template("bh.html", bottling_runs=bottling_runs)
+
 if __name__ == "__main__":
     app.run()
